@@ -63,10 +63,10 @@ dependencies {
     // Corrutinas para trabajo asincrónico
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0")
     // Kotest
-    testImplementation("io.kotest:kotest-runner-junit5:5.8.6")
-    testImplementation("io.kotest:kotest-assertions-core:5.8.8")
+    testImplementation("io.kotest:kotest-runner-junit5:5.9.1")
+    testImplementation("io.kotest:kotest-assertions-core:5.9.1")
     // JUnit 5
-    testImplementation("org.junit.jupiter:junit-jupiter:5.10.6")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.2")
     // Mockk
     testImplementation("io.mockk:mockk:1.13.10")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.0")

@@ -1,13 +1,14 @@
 package com.example.guia_14_grupo_13_feriafind
 
-import com.example.guia_14_grupo_13_feriafind.data.model.Post // Importa tu modelo Post
-import com.example.guia_14_grupo_13_feriafind.viewmodel.PostViewModel // Importa tu ViewModel
+import com.example.guia_14_grupo_13_feriafind.data.model.Post
+import com.example.guia_14_grupo_13_feriafind.viewmodel.PostViewModel
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.collections.shouldContainExactly
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 
-@OptIn(markerClass = ExperimentalCoroutinesApi::class)
+
+@OptIn(markerClass = [ExperimentalCoroutinesApi::class])
 class PostViewModelTest: StringSpec(body = {
 
     "postList debe contener los datos esperados después de fetchPosts()" {
