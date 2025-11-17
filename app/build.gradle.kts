@@ -3,13 +3,11 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
 }
-
 android {
     namespace = "com.example.guia_14_grupo_13_feriafind"
     compileSdk {
         version = release(36)
     }
-
     defaultConfig {
         applicationId = "com.example.guia_14_grupo_13_feriafind"
         minSdk = 24
@@ -19,7 +17,6 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -57,13 +54,23 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
-    // Jetpack Compose y Material 3 (versión 2025)
     implementation("androidx.activity:activity-compose:1.9.0")
-    implementation("androidx.compose.material3:material3:1.3.0") // Nota: El PDF tiene un error tipográfico '1.3.0%', lo corregí.
+    implementation("androidx.compose.material3:material3:1.3.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
-// Retrofit y Gson Converter
+    // Retrofit y Gson Converter
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
-// Corrutinas para trabajo asincrónico
+    // Corrutinas para trabajo asincrónico
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0")
+    // Kotest
+    testImplementation("io.kotest:kotest-runner-junit5:5.8.6")
+    testImplementation("io.kotest:kotest-assertions-core:5.8.8")
+    // JUnit 5
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.6")
+    // Mockk
+    testImplementation("io.mockk:mockk:1.13.10")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.0")
+}
+tasks.withType<Test>().configureEach {
+    useJUnitPlatform()
 }
